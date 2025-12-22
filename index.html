@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>title</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>Intractive Multiplication Table</h1>
+        <div class="controls">
+            <label>Enter a number: <input type="number" id="numbersInput" placeholder="e.g. 6"> </label>
+
+            <label>Select range:
+                <select  id="selectRange">
+                    <option value="10">1 to 10</option>
+                    <option value="12">1 to 12</option>
+                    <option value="15">1 to 15</option>
+                    <option value="50">1 to 50</option>
+                    <option value="100">1 to 100</option>
+                    <option value="1000">1 to 1000</option>
+                    <option value="1100">1 to 1100</option>
+                    
+                </select>
+            </label>
+
+
+            <button onclick="generateTable()">Generate Table </button>
+        </div>
+        <div id="table_container"></div>
+        <script>
+            function generateTable(){
+             const number =   document.getElementById("numbersInput").value ;
+             const range = document.getElementById("selectRange").value ;
+             
+             if (!number){
+                alert("please enter a number:" )
+                return
+             }
+             let table = "<table>"
+             for (let i = 1; i<=range; i++) {
+                table += `
+                <tr>
+                <td >${number}* ${i}</td>
+                <td>${number*i}<td>
+                    </tr>
+                `
+             }
+             table += "</table>"
+            document.getElementById("table_container").innerHTML = table ;
+            }
+
+        </script>
+    </body>
+</html>

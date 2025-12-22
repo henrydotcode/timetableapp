@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+input,select,button{
+padding: 10px;
+font-size: 16px;
+}
+table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      overflow-x: auto;
+      display: block;  /* Makes table responsive */
+    }
+
+    td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+      background: #f4f4f4;
+      transition: 0.3s;
+    }
+td:hover{
+    background: green;
+}
+button{
+    border-radius: 15px;
+    border-color: aqua;
+    border-style: groove;
+    color: red;
+    background-color: rgb(0, 255, 255);
+}
+button:hover{
+    border-radius: 15px;
+    border-color: rgb(255, 0, 191);
+    border-style: groove;
+    background-color: rgb(7, 7, 19);
+}
